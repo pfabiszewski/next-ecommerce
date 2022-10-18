@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { ActiveLink } from './ActiveLink';
 
 const routes = [
   { href: '/', name: 'Home' },
@@ -13,9 +13,9 @@ export const Header = () => {
           {routes.map((route) => {
             return (
               <li key={route.href}>
-                <Link href={route.href}>
+                <ActiveLink activeClassName="text-pink-500" href={route.href}>
                   <a>{route.name}</a>
-                </Link>
+                </ActiveLink>
               </li>
             );
           })}
